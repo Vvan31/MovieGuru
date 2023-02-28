@@ -3,7 +3,10 @@ body{
 }
 
 
-
+nav{
+    background-color: #1F271B;
+    color: #fff;
+}
 
 .cont_question{
     border: 15px solid #EE964B;
