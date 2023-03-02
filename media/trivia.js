@@ -67,7 +67,7 @@ function showQuestions(questions,answers, id){
   next_btn.addEventListener("click", function() {
     (actual_question < questions.length-1)? actual_question += 1:actual_question = questions.length-1;
     updateData(questions,answers, actual_question);
-    // ↓ron
+
     resetRadioButtonsBackground();
   });
   prev_btn.addEventListener("click", function() {
@@ -101,17 +101,18 @@ function randomShuffle(array) {
 }
 
 
-// ↓ron
+
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 radioButtons.forEach((radioButton) => {
   radioButton.addEventListener('click', () => {
     if (radioButton.checked) {
       radioButtons.forEach((rb) => {
         rb.nextElementSibling.style.backgroundColor = 'white';
-        rb.nextElementSibling.style.color = 'red'; 
+
+        rb.nextElementSibling.style.color = 'red';
       });
       radioButton.nextElementSibling.style.backgroundColor = 'red';
-      radioButton.nextElementSibling.style.color = 'white'; 
+      radioButton.nextElementSibling.style.color = 'white';
     }
   });
 });
@@ -122,3 +123,4 @@ function resetRadioButtonsBackground() {
     rb.nextElementSibling.style.color = 'red';
   });
 }
+
