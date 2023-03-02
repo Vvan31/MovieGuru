@@ -1,0 +1,93 @@
+body{
+  background-color:#19647E;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+}
+
+.main{
+  background-color:rgb(222, 158, 63);
+  height: 400px;
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  text-align: center;
+  border: 2rem solid rgb(222, 158, 63);
+  position: relative;
+}
+
+.main2{
+  background-color: rgb(245, 245, 245);
+  border-radius: 1rem;
+  height:100%;
+  width: 100%;
+  position: absolute;
+}
+
+h1{
+  text-shadow: 5px 2px #19647E;
+  font-size: 6rem;
+  font-weight: 6rem;
+  color: #EE964B;
+}
+
+/*- button ---------------------------*/
+a.btn_17 {
+  font-size: 2rem;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	width: 120px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	color: #f0ece9;
+	background: #19647E;
+	transition: 0.3s ease-in-out;
+}
+
+a.btn_17::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #EE964B;
+  transition: 0.2s;
+}
+
+a.btn_17:hover {
+	background: #EE964B;
+	color: #19647E;
+}
+
+a.btn_17:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/*- Images -------- -------------------------*/
+.img_movie{
+  width: 60%;
+  position: absolute;
+  right: 120%;
+  top:17%;
+}
+
+.img_nega1{
+  width: 70%;
+  position: absolute;
+   left: 150%;
+   top: -60%;
+}
+
+.img_nega2{
+  width: 40%;
+  position: absolute;
+   left: 140%;
+   top: 10%;
+}
+
