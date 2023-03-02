@@ -5,6 +5,7 @@ const music = document.getElementById("12").addEventListener('click' , showData)
 const tv = document.getElementById("14").addEventListener('click' , showData);
 const videoGames = document.getElementById("15").addEventListener('click' , showData);
 
+
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
 async function fetchQuizData (id){
@@ -66,6 +67,8 @@ function showQuestions(questions,answers, id){
   next_btn.addEventListener("click", function() {
     (actual_question < questions.length-1)? actual_question += 1:actual_question = questions.length-1;
     updateData(questions,answers, actual_question);
+    // ↓ron
+    resetRadioButtonsBackground();
   });
   prev_btn.addEventListener("click", function() {
     (actual_question > 0)?actual_question -= 1:actual_question = 0;
@@ -95,4 +98,27 @@ function randomShuffle(array) {
       array[randomIndex], array[currentIndex]];
   }
   return array;
+}
+
+
+// ↓ron
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+radioButtons.forEach((radioButton) => {
+  radioButton.addEventListener('click', () => {
+    if (radioButton.checked) {
+      radioButtons.forEach((rb) => {
+        rb.nextElementSibling.style.backgroundColor = 'white';
+        rb.nextElementSibling.style.color = 'red'; 
+      });
+      radioButton.nextElementSibling.style.backgroundColor = 'red';
+      radioButton.nextElementSibling.style.color = 'white'; 
+    }
+  });
+});
+
+function resetRadioButtonsBackground() {
+  radioButtons.forEach((rb) => {
+    rb.nextElementSibling.style.backgroundColor = 'white';
+    rb.nextElementSibling.style.color = 'red';
+  });
 }
