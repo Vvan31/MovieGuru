@@ -13,6 +13,7 @@ gsap.to(".img_nega2",{
 });
 
 const form = document.querySelector('#myForm')
+
 // const option1 = form.elements['genre-select'];
 // const option2 = form.elements['question-select'];
 
@@ -49,9 +50,8 @@ const form = document.querySelector('#myForm')
 
   form.addEventListener('submit', (e) => {
     e.PreventDefault();
-    const selectedOption1 = option1.value;
+    const selectedOption1 = option1.value;  
     const selectedOption2 = option2.value;
-
     localStorage.setItem('selectedOption1', selectedOption1)
     localStorage.setItem('selectedOption2',selectedOption2)
 
@@ -60,13 +60,24 @@ const form = document.querySelector('#myForm')
 
   const startEl = document.querySelector('.btn_17')
   startEl.addEventListener('click', function() {
+
     const genreEl = document.getElementById('genre-select')
     const amountEl = document.getElementById('question-select')
-    localStorage.setItem('genre',genreEl.value)
-    localStorage.setItem('amount',amountEl.value)
-    window.location.href = "index.html"
-  })
 
+        if (genreEl.value == 0 || amountEl.value == 0) {
+      const modalView = document.getElementById("modalView");
+      modalView.style.display = "flex";
+      const closeBtn = document.getElementById("modalView__closeBtn");
+
+      closeBtn.addEventListener("click", () => {
+        modalView.style.display = "none";
+      });
+    }else {
+      localStorage.setItem('genre',genreEl.value)
+      localStorage.setItem('amount',amountEl.value)
+      window.location.href = "index.html"
+    }
+  })
 
   // curtain
 gsap.set("#left-curtain", {xPercent: 0});
