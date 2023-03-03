@@ -1,9 +1,30 @@
+*{
+  margin: 0;padding: 0;
+}
 body{
   background-color:#19647E;
   height: 100vh;
   display: flex;
   align-items: center;
   font-family: 'Lobster', cursive;
+  overflow-x: hidden;
+}
+.curtain{
+  display: flex;
+}
+.curtain > img{
+  display: block;
+  width: 50%;
+  min-height: 100vh;
+}
+.top-container{
+  position: relative;
+}
+.main-container{
+  position: absolute;
+  top: 15%;left: 0;
+  width: 100%;
+  z-index: -1;
 }
 
 .main{
@@ -80,15 +101,15 @@ a.btn_17:hover::before {
 .img_nega1{
   width: 70%;
   position: absolute;
-   left: 150%;
-   top: -60%;
+  left: 150%;
+  top: -60%;
 }
 
 .img_nega2{
   width: 40%;
   position: absolute;
-   left: 140%;
-   top: 10%;
+  left: 140%;
+  top: 10%;
 }
 
 /* ALERT */

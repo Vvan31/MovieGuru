@@ -12,7 +12,8 @@ gsap.to(".img_nega2",{
   ease:"linear"
 });
 
- const form = document.querySelector('#myForm')
+const form = document.querySelector('#myForm')
+
 // const option1 = form.elements['genre-select'];
 // const option2 = form.elements['question-select'];
 
@@ -63,7 +64,7 @@ gsap.to(".img_nega2",{
     const genreEl = document.getElementById('genre-select')
     const amountEl = document.getElementById('question-select')
 
-    if (genreEl.value == 0 || amountEl.value == 0) {
+        if (genreEl.value == 0 || amountEl.value == 0) {
       const modalView = document.getElementById("modalView");
       modalView.style.display = "flex";
       const closeBtn = document.getElementById("modalView__closeBtn");
@@ -76,5 +77,22 @@ gsap.to(".img_nega2",{
       localStorage.setItem('amount',amountEl.value)
       window.location.href = "index.html"
     }
-
   })
+
+  // curtain
+gsap.set("#left-curtain", {xPercent: 0});
+gsap.set("#right-curtain", {xPercent: 0});
+
+document.addEventListener("click", function() {
+  gsap.to("#left-curtain", {
+    xPercent: -500,   
+    duration: 30,    
+    ease: "power2.easeOut" 
+  });
+
+  gsap.to("#right-curtain", {
+    xPercent: 500,   
+    duration: 30,   
+    ease: "power2.easeOut"  
+  });
+});
