@@ -9,37 +9,35 @@ const videoGames = document
   .addEventListener('click', showData)
 let score = 0
 const answerData = []
-
-// const startBtn = document.querySelector(".btn_17").addEventListener('click',showData);
-// const select = document.querySelector('#genre-select')
-
-window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
-async function fetchQuizData (id,amount){
-const options = {
-  method: 'GET',
-  url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
-}
-return await axios
-  .request(options)
-  .then(async function (response) {
-    const { results } = await response.data
-    /* console.log(results); */
-    return results;
+async function fetchQuizData(id, amount) {
+  const options = {
+    method: 'GET',
+    url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`,
+  }
+  return await axios
+    .request(options)
+    .then(async function (response) {
+      const { results } = await response.data
+      /* console.log(results); */
+      return results
+    })
+    .catch(function (error) {
+      console.error(error)
+    })
 
-  }).catch(function (error) {
-    console.error(error);
-  });
 }
 
 /*  Called from eventListener on Category options 
     Calls API and gets individual questions and answers arrays.*/
 async function showData(e) {
+  localStorage.removeItem('score')
   const id = localStorage.getItem('genre')
-  const amount = this.localStorage.getItem('amount')
-  let trivia = await fetchQuizData(id,amount);
-  let [questions, answers] = getQuestions(trivia);
+  const amountOfQuestions = localStorage.getItem('amount')
+  let trivia = await fetchQuizData(id, amountOfQuestions)
+  let [questions, answers] = getQuestions(trivia)
+
 
   showQuestions(questions, answers, id)
 }
@@ -167,22 +165,20 @@ function randomShuffle(array) {
   return array
 }
 
-
-
-const radioButtons = document.querySelectorAll('input[type="radio"]');
+const radioButtons = document.querySelectorAll('input[type="radio"]')
 radioButtons.forEach((radioButton) => {
   radioButton.addEventListener('click', () => {
     if (radioButton.checked) {
       radioButtons.forEach((rb) => {
-        rb.nextElementSibling.style.backgroundColor = 'white';
+        rb.nextElementSibling.style.backgroundColor = 'white'
 
-        rb.nextElementSibling.style.color = 'red';
-      });
-      radioButton.nextElementSibling.style.backgroundColor = 'red';
-      radioButton.nextElementSibling.style.color = 'white';
+        rb.nextElementSibling.style.color = 'red'
+      })
+      radioButton.nextElementSibling.style.backgroundColor = 'red'
+      radioButton.nextElementSibling.style.color = 'white'
     }
-  });
-});
+  })
+})
 
 function resetRadioButtonsBackground() {
   radioButtons.forEach((rb) => {
@@ -190,3 +186,4 @@ function resetRadioButtonsBackground() {
     rb.nextElementSibling.style.color = 'red';
   });
 }
+

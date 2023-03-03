@@ -1,6 +1,6 @@
 // need to assign score dynamically
 const score = localStorage.getItem('score')
-const amount = 20
+const amount = localStorage.getItem('amount')
 function showEverything() {
   document.querySelector('#score span + span').innerHTML = amount
   setTimeout(() => {
