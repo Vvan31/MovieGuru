@@ -1,7 +1,8 @@
 // need to assign score dynamically
-const score = 18
-
+const score = localStorage.getItem('score')
+const amount = 20
 function showEverything() {
+  document.querySelector('#score span + span').innerHTML = amount
   setTimeout(() => {
     makeChart()
     countScore()
@@ -17,7 +18,7 @@ function makeChart() {
     data: {
       datasets: [
         {
-          data: [score, 20 - score],
+          data: [score, amount - score],
           backgroundColor: ['#28AFB0', 'transparent'],
           borderWidth: 0,
           hoverOffset: 0,
@@ -61,13 +62,15 @@ function showCongratsText(score) {
     'Not Good😱',
   ]
 
-  if (score === 20) {
+  console.log((score / amount) * 100)
+
+  if (score === amount) {
     congratsEl.textContent = CONGRATS_TEXTS[0]
-  } else if (score >= 15) {
+  } else if ((score / amount) * 100 >= 75) {
     congratsEl.textContent = CONGRATS_TEXTS[1]
-  } else if (score >= 10) {
+  } else if ((score / amount) * 100 >= 50) {
     congratsEl.textContent = CONGRATS_TEXTS[2]
-  } else if (score >= 5) {
+  } else if ((score / amount) * 100 >= 20) {
     congratsEl.textContent = CONGRATS_TEXTS[3]
   } else {
     congratsEl.textContent = CONGRATS_TEXTS[4]
