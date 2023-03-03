@@ -24,6 +24,8 @@ nav{
 
 label.radio {
   cursor: pointer;
+  display: block;
+  margin: 0 3rem 1.3rem;
 }
 
 label.radio input {
@@ -35,11 +37,10 @@ label.radio input {
 }
 
 label.radio span {
-  padding: 4px 0px;
+  padding: .5rem 0;
   border: 1px solid red;
-  display: inline-block;
+  display: block;
   color: red;
-  width: 200px;
   text-align: center;
   border-radius: 3px;
   margin-top: 7px;
@@ -56,10 +57,6 @@ label.radio span.active {
   background-color: red;
 }
 
-
-.ans {
-  margin-left: 36px !important;
-}
 
 .btn:focus {
   outline: 0 !important;
