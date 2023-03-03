@@ -1,37 +1,83 @@
 .text {
-    font-size: 1.3rem;
-  }
-  .congrats {
-    font-size: 2rem;
-  }
+  font-size: 1.3rem;
+}
+.congrats {
+  font-size: 2rem;
+}
 
-  .score-circle-box {
-    width: 400px;
-    height: 400px;
-  }
+.score-circle-box {
+  width: 400px;
+  height: 400px;
+}
 
-  .score-circle-box::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    background: #efefef;
-    border-radius: 50%;
-  }
+.score-circle-box::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background: #efefef;
+  border-radius: 50%;
+}
 
-  .score {
-    font-size: 3rem;
-    font-weight: bold;
-  }
+.score {
+  font-size: 3rem;
+  font-weight: bold;
+}
 
-  .score-content {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.score-content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-container{
+  border-radius: 1rem 1rem 0 0;
+}
+.bottom-container{
+  border-radius: 0 0 1rem 1rem;
+}
+
+
+/*- button ---------------------------*/
+a.btn_17 {
+  font-size: 1rem;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+	width: 300px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	color: #f0ece9;
+	background: #19647E;
+	transition: 0.3s ease-in-out;
+}
+
+a.btn_17::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #EE964B;
+  transition: 0.2s;
+}
+
+a.btn_17:hover {
+	background: #EE964B;
+	color: #19647E;
+}
+
+a.btn_17:hover::before {
+  top: 0;
+  left: 0;
+}
+
 
   @media screen and (max-width: 600px) {
     .text {
