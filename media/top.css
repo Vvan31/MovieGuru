@@ -30,7 +30,6 @@ body{
   border: 2rem solid rgb(222, 158, 63);
   position: relative;
 }
-
 .main2{
   background-color: rgb(245, 245, 245);
   border-radius: 1rem;
@@ -82,6 +81,18 @@ a.btn_17:hover::before {
   top: 0;
   left: 0;
 }
+
+select{
+  margin: 2.7rem;
+  padding: 0.7rem;
+  background-color: #EE964B;
+  color:#19647E;
+  font-family: 'Lobster', cursive;
+  font-size: 1.3rem;
+  border-color: white;
+  border-radius: 0.3rem;
+}
+
 
 /*- Images -------- -------------------------*/
 .img_movie{
