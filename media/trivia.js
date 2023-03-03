@@ -9,6 +9,7 @@ const videoGames = document
 let score = 0
 const answerData = []
 
+
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
 async function fetchQuizData(id) {
@@ -160,3 +161,28 @@ function randomShuffle(array) {
   }
   return array
 }
+
+
+
+const radioButtons = document.querySelectorAll('input[type="radio"]');
+radioButtons.forEach((radioButton) => {
+  radioButton.addEventListener('click', () => {
+    if (radioButton.checked) {
+      radioButtons.forEach((rb) => {
+        rb.nextElementSibling.style.backgroundColor = 'white';
+
+        rb.nextElementSibling.style.color = 'red';
+      });
+      radioButton.nextElementSibling.style.backgroundColor = 'red';
+      radioButton.nextElementSibling.style.color = 'white';
+    }
+  });
+});
+
+function resetRadioButtonsBackground() {
+  radioButtons.forEach((rb) => {
+    rb.nextElementSibling.style.backgroundColor = 'white';
+    rb.nextElementSibling.style.color = 'red';
+  });
+}
+
