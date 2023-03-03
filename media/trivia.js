@@ -1,17 +1,20 @@
 // Individual event listeners for categories. 
-const books = document.getElementById("10").addEventListener('click' , showData);
-const film = document.getElementById("11").addEventListener('click' , showData);
-const music = document.getElementById("12").addEventListener('click' , showData);
-const tv = document.getElementById("14").addEventListener('click' , showData);
-const videoGames = document.getElementById("15").addEventListener('click' , showData);
+// const books = document.getElementById("10").addEventListener('click' , showData);
+// const film = document.getElementById("11").addEventListener('click' , showData);
+// const music = document.getElementById("12").addEventListener('click' , showData);
+// const tv = document.getElementById("14").addEventListener('click' , showData);
+// const videoGames = document.getElementById("15").addEventListener('click' , showData);
 
+// const startBtn = document.querySelector(".btn_17").addEventListener('click',showData);
+// const select = document.querySelector('#genre-select')
 
+window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
-async function fetchQuizData (id){
+async function fetchQuizData (id,amount){
 const options = {
   method: 'GET',
-  url: `https://opentdb.com/api.php?amount=50&category=${id}&type=multiple`
+  url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
 }
 return await axios
   .request(options)
@@ -27,8 +30,9 @@ return await axios
 /*  Called from eventListener on Category options 
     Calls API and gets individual questions and answers arrays.*/
 async function showData(e) {
-  let id = e.target.getAttribute("id")
-  let trivia = await fetchQuizData(id);
+  const id = localStorage.getItem('genre')
+  const amount = this.localStorage.getItem('amount')
+  let trivia = await fetchQuizData(id,amount);
   let [questions, answers] = getQuestions(trivia);
 
   showQuestions(questions, answers, id);
@@ -86,6 +90,7 @@ function updateData(questions,answers, actual_question){
   document.getElementById("answer2").innerHTML = all_answers[1];
   document.getElementById("answer3").innerHTML = all_answers[2];
   document.getElementById("answer4").innerHTML = all_answers[3];
+  
 }
 
 function randomShuffle(array) {
@@ -123,4 +128,3 @@ function resetRadioButtonsBackground() {
     rb.nextElementSibling.style.color = 'red';
   });
 }
-

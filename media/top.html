@@ -10,10 +10,28 @@
 </head>
 <body>
     <div class="main">
-      <div class="main2">
+      <form class="main2" id="myForm" action="index.html">
         <h1>Quiz trivia</h1>
-        <a href="" class="btn_17">start</a>
-      </div>
+        <!-- genru -->
+        <select id="genre-select" name="genre-select">
+          <option>Choose Genru</option>
+          <option value="10">Books</option>
+          <option value="11">Film</option>
+          <option value="12">Music</option>
+          <option value="14">Television</option>
+          <option value="15">Video Games</option>
+        </select>
+        <!-- amount -->
+        <select id="question-select" name="question-select">
+          <option>Question amount</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+
+        <a href="#"  class="btn_17" >start</a>
+      </form>
       <img class="img_movie" src="./img/img_movie.png">
       <img class="img_nega1"  src="./img/img_nega.png">
       <img class="img_nega2"  src="./img/img_nega.png">
@@ -26,5 +44,6 @@ crossorigin="anonymous"
 referrerpolicy="no-referrer"
 ></script>
 <script src="./top.js"></script>
+
 </html>
  
