@@ -83,6 +83,18 @@ a.btn_17:hover::before {
   left: 0;
 }
 
+select{
+  margin: 2.7rem;
+  padding: 0.7rem;
+  background-color: #EE964B;
+  color:#19647E;
+  font-family: 'Lobster', cursive;
+  font-size: 1.3rem;
+  border-color: white;
+  border-radius: 0.3rem;
+}
+
+
 /*- Images -------- -------------------------*/
 .img_movie{
   width: 60%;
