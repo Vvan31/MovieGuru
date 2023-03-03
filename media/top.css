@@ -11,20 +11,13 @@ body{
 }
 .curtain{
   display: flex;
+  position: absolute;
+  z-index: 100;
 }
 .curtain > img{
   display: block;
   width: 50%;
   min-height: 100vh;
-}
-.top-container{
-  position: relative;
-}
-.main-container{
-  position: absolute;
-  top: 15%;left: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .main{

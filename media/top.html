@@ -10,14 +10,10 @@
   <title>MovieGURU TOP</title>
 </head>
 <body>
-  <div class="top-container">
-    <div class="curtain">
+    <div class="curtain" id="curtain">
       <img src="./img/img_curtain.jpg" class="curtain-img" id="left-curtain" alt="">
       <img src="./img/img_curtain.jpg" class="curtain-img" id="right-curtain" alt="">
-
     </div>
-
-    <div class="main-container">
       <div class="main">
         <!-- ALERTS -->
         <div class="modalView" id="modalView">
@@ -27,12 +23,11 @@
             <p>Select an option!</p>
           </div>
         </div>
-      
         <form class="main2" id="myForm" action="index.html">
           <h1>Quiz trivia</h1>
           <!-- genru -->
           <select id="genre-select" name="genre-select">
-            <option>Choose Genru</option>
+            <option value="0">Choose Genru</option>
             <option value="10">Books</option>
             <option value="11">Film</option>
             <option value="12">Music</option>
@@ -41,7 +36,7 @@
           </select>
           <!-- amount -->
           <select id="question-select" name="question-select">
-            <option>Question amount</option>
+            <option value="0">Question amount</option>
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>
@@ -54,8 +49,6 @@
         <img class="img_nega1"  src="./img/img_nega.png">
         <img class="img_nega2"  src="./img/img_nega.png">
       </div><!-- main -->
-    </div><!-- main-container -->
-  </div><!-- top-container -->
 </body>
 <script
 src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"

@@ -13,41 +13,6 @@ gsap.to(".img_nega2",{
 });
 
 const form = document.querySelector('#myForm')
-
-// const option1 = form.elements['genre-select'];
-// const option2 = form.elements['question-select'];
-
-// // -------------------------
-// async function fetchQuizData (id){
-//   const options = {
-//     method: 'GET',
-//     url: `https://opentdb.com/api.php?amount=50&category=${id}&type=multiple`
-//   }
-//   return await axios
-//     .request(options)
-//     .then(async function (response) {
-//       const { results } = await response.data
-//       /* console.log(results); */
-//       return results;
-  
-//     }).catch(function (error) {
-//       console.error(error);
-//     });
-//   }
-
-//   async function showData(category, amount) {
-//     if(category = "Books"){
-//       id = 10;
-//     }if(category ){
-
-//     }
-
-//     let trivia = await fetchQuizData(id);
-//     let [questions, answers] = getQuestions(trivia);
-  
-//     showQuestions(questions, answers, id);
-//   }
-
   form.addEventListener('submit', (e) => {
     e.PreventDefault();
     const selectedOption1 = option1.value;  
@@ -80,19 +45,15 @@ const form = document.querySelector('#myForm')
   })
 
   // curtain
-gsap.set("#left-curtain", {xPercent: 0});
-gsap.set("#right-curtain", {xPercent: 0});
+  function removeElement(element) {
+    document.getElementById(element).remove();
+  }
+document.getElementById("curtain").addEventListener("click", function() {
 
-document.addEventListener("click", function() {
-  gsap.to("#left-curtain", {
-    xPercent: -500,   
-    duration: 30,    
-    ease: "power2.easeOut" 
-  });
+  tl = new TimelineMax();
 
-  gsap.to("#right-curtain", {
-    xPercent: 500,   
-    duration: 30,   
-    ease: "power2.easeOut"  
-  });
+  tl.fromTo("#left-curtain", {x: 0}, {x:-800, duration: 2},0)
+  .fromTo("#right-curtain", {x: 0}, {x:800, duration: 2},0)
+  .fromTo("#curtain", {x: 0}, {x:8000, duration: 0.1},"<2")
+
 });
