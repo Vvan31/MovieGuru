@@ -6,15 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="top.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+  
   <title>Document</title>
+
 </head>
 <body>
     <div class="main">
+      <!-- ALERTS -->
+      <div class="modalView" id="modalView">
+        <div id="modalView__closeBtn"></div>
+        <div class="modalView__content centered">
+          <!--     <h1>THIS IS A TITLE</h1> -->
+          <p>Select an option!</p>
+        </div>
+      </div>
+
+
       <form class="main2" id="myForm" action="index.html">
         <h1>Quiz trivia</h1>
         <!-- genru -->
         <select id="genre-select" name="genre-select">
-          <option>Choose Genru</option>
+          <option value="0">Choose Genru</option>
           <option value="10">Books</option>
           <option value="11">Film</option>
           <option value="12">Music</option>
@@ -23,7 +35,7 @@
         </select>
         <!-- amount -->
         <select id="question-select" name="question-select">
-          <option>Question amount</option>
+          <option value="0">Question amount</option>
           <option value="5">5</option>
           <option value="10">10</option>
           <option value="15">15</option>
