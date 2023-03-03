@@ -1,3 +1,4 @@
+
 // Individual event listeners for categories.
 const books = document.getElementById('10').addEventListener('click', showData)
 const film = document.getElementById('11').addEventListener('click', showData)
@@ -9,34 +10,36 @@ const videoGames = document
 let score = 0
 const answerData = []
 
+// const startBtn = document.querySelector(".btn_17").addEventListener('click',showData);
+// const select = document.querySelector('#genre-select')
 
+window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
-async function fetchQuizData(id) {
-  const options = {
-    method: 'GET',
-    url: `https://opentdb.com/api.php?amount=20&category=${id}&type=multiple`,
-  }
-  return await axios
-    .request(options)
-    .then(async function (response) {
-      const { results } = await response.data
-      /* console.log(results); */
-      console.log(results)
-      return results
-    })
-    .catch(function (error) {
-      console.error(error)
-    })
+async function fetchQuizData (id,amount){
+const options = {
+  method: 'GET',
+  url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
+}
+return await axios
+  .request(options)
+  .then(async function (response) {
+    const { results } = await response.data
+    /* console.log(results); */
+    return results;
+
+  }).catch(function (error) {
+    console.error(error);
+  });
 }
 
 /*  Called from eventListener on Category options 
     Calls API and gets individual questions and answers arrays.*/
 async function showData(e) {
-  localStorage.removeItem('score')
-  let id = e.target.getAttribute('id')
-  let trivia = await fetchQuizData(id)
-  let [questions, answers] = getQuestions(trivia)
+  const id = localStorage.getItem('genre')
+  const amount = this.localStorage.getItem('amount')
+  let trivia = await fetchQuizData(id,amount);
+  let [questions, answers] = getQuestions(trivia);
 
   showQuestions(questions, answers, id)
 }
@@ -87,6 +90,7 @@ function showQuestions(questions, answers, id) {
   })
 }
 /* Updates question and answers html elements text */
+
 function updateData(questions, answers, actual_question) {
   // console.log(score)
   document.getElementById('remaining-question').innerHTML = `(${
@@ -145,6 +149,7 @@ function checkAnswerData(answerData) {
 function htmlDecode(input) {
   let doc = new DOMParser().parseFromString(input, 'text/html')
   return doc.documentElement.textContent
+
 }
 
 function randomShuffle(array) {
@@ -185,4 +190,3 @@ function resetRadioButtonsBackground() {
     rb.nextElementSibling.style.color = 'red';
   });
 }
-
