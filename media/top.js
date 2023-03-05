@@ -47,14 +47,11 @@ startEl.addEventListener('click', function () {
 function removeElement(element) {
   document.getElementById(element).remove()
 }
-document.getElementById('curtain').addEventListener(
-  'click',
-  function () {
+document.getElementById('curtain').addEventListener('click',function () {
     tl = new TimelineMax()
 
     tl.fromTo('#left-curtain', { x: 0 }, { x: -800, duration: 2 }, 0)
       .fromTo('#right-curtain', { x: 0 }, { x: 800, duration: 2 }, 0)
       .fromTo('#curtain', { x: 0 }, { x: 8000, duration: 0.1 }, '<2')
-  },
-  { once: true }
-)
+  },{ once: true })
+
