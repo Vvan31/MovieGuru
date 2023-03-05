@@ -46,6 +46,7 @@ label.radio span {
   border-radius: 3px;
   margin-top: 7px;
   text-transform: uppercase;
+  max-width: 600px;
 }
 
 label.radio input:checked + span {
@@ -67,4 +68,50 @@ label.radio span.active {
 .btn:active {
   outline: 0 !important;
   box-shadow: none !important;
+}
+
+
+/* NAV MENU */
+/*- button ---------------------------*/
+.btn_category {
+  font-family: 'Lobster', cursive;
+  font-size: 150%;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+  right: -27%;
+	width: 28%;
+  max-width: 250px;
+	height: 60px;
+	margin: auto;
+	padding: 0.5rem 0.5rem;
+	font-weight: bold;
+	color: #f0ece9;
+	background: #19647E;
+	transition: 0.3s ease-in-out;
+  border-radius: 1rem;
+}
+
+a.btn_category::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border: 2px solid #EE964B;
+  transition: 0.2s;
+  border-radius: 1rem;
+
+}
+
+a.btn_category:hover {
+	background: #EE964B;
+	color: #19647E;
+}
+
+a.btn_category:hover::before {
+  top: 0;
+  left: 0;
 }

@@ -1,36 +1,38 @@
-
-window.addEventListener('load', showData)
 let score = 0
 const answerData = []
+
+const categorybtn = document.querySelector(".btn_category");
+categorybtn.addEventListener('click', () => window.location.href = "top.html");
+
+window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
-async function fetchQuizData(id, amount) {
-  const options = {
-    method: 'GET',
-    url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`,
-  }
-  return await axios
-    .request(options)
-    .then(async function (response) {
-      const { results } = await response.data
-      /* console.log(results); */
-      return results
-    })
-    .catch(function (error) {
-      console.error(error)
-    })
+async function fetchQuizData (id,amount){
+const options = {
+  method: 'GET',
+  url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
+}
+return await axios
+  .request(options)
+  .then(async function (response) {
+    const { results } = await response.data
+    return results;
+
+  }).catch(function (error) {
+    console.error(error);
+  });
 }
 
 /*  Called from eventListener on Category options 
     Calls API and gets individual questions and answers arrays.*/
 async function showData(e) {
-  localStorage.removeItem('score')
-  const id = localStorage.getItem('genre')
-  const amountOfQuestions = localStorage.getItem('amount')
-  let trivia = await fetchQuizData(id, amountOfQuestions)
-  let [questions, answers] = getQuestions(trivia)
+  const category = localStorage.getItem('genre')
+  const id = localStorage.getItem('id')
+  const amount = localStorage.getItem('amount')
+  let trivia = await fetchQuizData(id,amount);
+  let [questions, answers] = getQuestions(trivia);
 
-  showQuestions(questions, answers, id)
+  showQuestions(questions, answers, id, category)
 }
 /*  return - questions array and answers array 
     answers array = [correct_answer , [all_answers], correct_answer [all_answers] ] */
@@ -53,9 +55,9 @@ function getQuestions(trivia) {
   return [questions, answers]
 }
 /* creates button functionality for displaying questions dynamically */
-function showQuestions(questions, answers, id) {
+function showQuestions(questions, answers, id, category) {
   let actual_question = 0
-  let category = document.getElementById(id).innerHTML
+ /*  let category = document.getElementById(id).innerHTML */
   let isCorrect = false
 
   // First question setup.
