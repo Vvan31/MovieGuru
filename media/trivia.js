@@ -1,17 +1,12 @@
 
 // Individual event listeners for categories.
-const books = document.getElementById('10').addEventListener('click', showData)
-const film = document.getElementById('11').addEventListener('click', showData)
-const music = document.getElementById('12').addEventListener('click', showData)
-const tv = document.getElementById('14').addEventListener('click', showData)
-const videoGames = document
-  .getElementById('15')
-  .addEventListener('click', showData)
+
 let score = 0
 const answerData = []
 
-// const startBtn = document.querySelector(".btn_17").addEventListener('click',showData);
-// const select = document.querySelector('#genre-select')
+const categorybtn = document.querySelector(".btn_category");
+categorybtn.addEventListener('click', () => window.location.href = "top.html");
+
 
 window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
@@ -25,7 +20,6 @@ return await axios
   .request(options)
   .then(async function (response) {
     const { results } = await response.data
-    /* console.log(results); */
     return results;
 
   }).catch(function (error) {
@@ -36,12 +30,13 @@ return await axios
 /*  Called from eventListener on Category options 
     Calls API and gets individual questions and answers arrays.*/
 async function showData(e) {
-  const id = localStorage.getItem('genre')
-  const amount = this.localStorage.getItem('amount')
+  const category = localStorage.getItem('genre')
+  const id = localStorage.getItem('id')
+  const amount = localStorage.getItem('amount')
   let trivia = await fetchQuizData(id,amount);
   let [questions, answers] = getQuestions(trivia);
 
-  showQuestions(questions, answers, id)
+  showQuestions(questions, answers, id, category)
 }
 /*  return - questions array and answers array 
     answers array = [correct_answer , [all_answers], correct_answer [all_answers] ] */
@@ -64,9 +59,9 @@ function getQuestions(trivia) {
   return [questions, answers]
 }
 /* creates button functionality for displaying questions dynamically */
-function showQuestions(questions, answers, id) {
+function showQuestions(questions, answers, id, category) {
   let actual_question = 0
-  let category = document.getElementById(id).innerHTML
+ /*  let category = document.getElementById(id).innerHTML */
   let isCorrect = false
 
   // First question setup.
