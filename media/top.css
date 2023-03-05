@@ -1,12 +1,19 @@
+:root{
+  --green: #1F271B; 
+  --orange: #EE964B;
+  --blue: #19647E;
+  --highlight: #F4D35E;
+  --white:rgb(245, 245, 245);
+}
+
 *{
   margin: 0;padding: 0;
 }
 body{
-  background-color:#19647E;
+  background-color:var(--blue);
   height: 100vh;
   display: flex;
   align-items: center;
-  font-family: 'Lobster', cursive;
   overflow-x: hidden;
 }
 .curtain{
@@ -21,28 +28,32 @@ body{
 }
 
 .main{
-  background-color:rgb(222, 158, 63);
+  background-color:var(--orange);
   height: 400px;
   width: 600px;
   margin: 0 auto;
   border-radius: 1rem;
   text-align: center;
-  border: 2rem solid rgb(222, 158, 63);
+  border: 2rem solid var(--orange);
   position: relative;
+  box-shadow: 40px 40px 18px 1px var(--green);
+
 }
 .main2{
-  background-color: rgb(245, 245, 245);
+  background-color: var(--white);
   border-radius: 1rem;
   height:100%;
   width: 100%;
   position: absolute;
+
 }
 
 h1{
-  text-shadow: 5px 2px #19647E;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 2px var(--blue);
   font-size: 6rem;
   font-weight: 6rem;
-  color: #EE964B;
+  color: var(--orange);
 }
 
 /*- button ---------------------------*/
@@ -55,9 +66,10 @@ a.btn_17 {
 	width: 120px;
 	margin: auto;
 	padding: 1rem 4rem;
+  font-family: 'Josefin Sans', sans-serif;
 	font-weight: bold;
-	color: #f0ece9;
-	background: #19647E;
+	color: var(--white);
+	background: var(--blue);
 	transition: 0.3s ease-in-out;
 }
 
@@ -68,13 +80,13 @@ a.btn_17::before {
   left: -5px;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
-  border: 2px solid #EE964B;
+  border: 2px solid var(--orange);
   transition: 0.2s;
 }
 
 a.btn_17:hover {
-	background: #EE964B;
-	color: #19647E;
+	background: var(--orange);
+	color: var(--blue);
 }
 
 a.btn_17:hover::before {
@@ -83,16 +95,26 @@ a.btn_17:hover::before {
 }
 
 select{
-  margin: 2.7rem;
+  /* margin: 2.7rem; */
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
+  margin-left: 0.7rem;
   padding: 0.7rem;
-  background-color: #EE964B;
-  color:#19647E;
-  font-family: 'Lobster', cursive;
+  background-color: var(--orange);
+  color:var(--white);
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3rem;
-  border-color: white;
+  border-style:outset;
+  border-width: 5px;
+  border-color: var(--orange);
   border-radius: 0.3rem;
 }
+select:hover{
+  background-color: var(--blue);
+  border-color: var(--blue);
 
+
+}
 
 /*- Images -------- -------------------------*/
 .img_movie{
@@ -128,17 +150,14 @@ select{
   align-items: center;
   top: -30%;
   left: 50%;
-  background: #6f1d93;
+  background: var(--green);
   transform: translate(-50%, -50%);
   padding: 20px 20px;
-  font-size: 1.2rem;
-  -webkit-box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
-  -moz-box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
-  box-shadow: -1px 2px 30px -8px rgba(0, 0, 0, 0.62);
+  box-shadow: 10px 10px 18px 1px black;
 }
 
 .modalView > .modalView__content {
-  color: white;
+  color: var(--white);
   font-weight: bold;
 }
 .modalView > .modalView__content.centered {
@@ -150,7 +169,7 @@ select{
   padding-bottom: 10px;
 }
 .modalView__content p {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 #modalView__closeBtn {
@@ -161,7 +180,7 @@ select{
   height: 35px;
   right: -17px;
   top: -17px;
-  color: white;
+  color: var(--white);
 }
 
 #modalView__closeBtn {
@@ -172,7 +191,7 @@ select{
   content: "";
   height: 20px;
   width: 20px;
-  border-top: 3px solid #ffffff;
+  border-top: 3px solid var(--white);
   position: absolute;
   top: 13px;
   right: 0px;
@@ -182,7 +201,7 @@ select{
   transform: rotate(-45deg);
 }
 #modalView__closeBtn:before {
-  color: white;
+  color: var(--white);
   right: 14px;
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -190,5 +209,5 @@ select{
   transform: rotate(45deg);
 }
 #modalView__closeBtn:hover {
-  background-color: green;
+  background-color: var(--highlight);
 }
