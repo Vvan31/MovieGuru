@@ -25,20 +25,21 @@ body{
   display: block;
   width: 50%;
   min-height: 100vh;
+  min-width: 50vw;
 }
 
 .main{
   background-color:var(--orange);
   height: 400px;
-  width: 600px;
+  width: 600px; 
   margin: 0 auto;
   border-radius: 1rem;
   text-align: center;
   border: 2rem solid var(--orange);
   position: relative;
   box-shadow: 40px 40px 18px 1px var(--green);
-
 }
+
 .main2{
   background-color: var(--white);
   border-radius: 1rem;
@@ -95,7 +96,6 @@ a.btn_17:hover::before {
 }
 
 select{
-  /* margin: 2.7rem; */
   margin-top: 2.7rem;
   margin-bottom: 2.7rem;
   margin-left: 0.7rem;
@@ -148,7 +148,7 @@ select:hover{
   display: none;
   justify-content: center;
   align-items: center;
-  top: -30%;
+  top: -25%;
   left: 50%;
   background: var(--green);
   transform: translate(-50%, -50%);
