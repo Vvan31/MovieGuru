@@ -1,113 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Guru</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+      type="text/css"
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Movie Guru</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/css" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Movie Guru</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Genre
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" id="10" href="#">Books</a>
-                <a class="dropdown-item" id="11" href="#">Film</a>
-                <a class="dropdown-item" id="12" href="#">Music</a>
-                <a class="dropdown-item" id="14" href="#">Television</a>
-                <a class="dropdown-item" id="15" href="#">Video Games</a>
-              </div>
-            </li>
-          </ul>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Movie Guru</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Genre
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" id="10" href="#">Books</a>
+              <a class="dropdown-item" id="11" href="#">Film</a>
+              <a class="dropdown-item" id="12" href="#">Music</a>
+              <a class="dropdown-item" id="14" href="#">Television</a>
+              <a class="dropdown-item" id="15" href="#">Video Games</a>
+            </div>
+          </li>
+        </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             Search
           </button>
         </form>
-        </div>
-      </nav>
-      <div class="container mt-5">
-        <div class="d-flex justify-content-center row">
-          <div class="col-md-10 col-lg-10 main-container">
-            <div class="cont_question">
-              <div class="top question bg-white p-3 border-bottom">
-                <div class="d-flex flex-row justify-content-between align-items-center mcq">
-                  <h4 id="category-title">MCQ Quiz</h4>
-                  <span id="remaining-question">(5 of 20)</span>
-                </div>
-              </div>
-              <div class="question bg-white p-3 border-bottom">
-                <div class="d-flex flex-row align-items-center question-title">
-                  <h3 class="text-danger">Q.</h3>
-                  <h5 id="question" class="mt-1 ml-2">
-                    Which of the following country has largest population?
-                  </h5>
-                </div>
-                <div class="ans ml-2">
-                  <label class="radio">
-                    <input type="radio" name="brazil" value="brazil" />
-                    <span id="answer1">Brazil</span>
-                  </label>
-                </div>
-                <div class="ans ml-2">
-                  <label class="radio">
-                    <input type="radio" name="Germany" value="Germany" />
-                    <span id="answer2">Germany</span>
-                  </label>
-                </div>
-                <div class="ans ml-2">
-                  <label class="radio">
-                    <input type="radio" name="Indonesia" value="Indonesia" />
-                    <span id="answer3">Indonesia</span>
-                  </label>
-                </div>
-                <div class="ans ml-2">
-                  <label class="radio">
-                    <input type="radio" name="Russia" value="Russia" />
-                    <span id="answer4">Russia</span>
-                  </label>
-                </div>
-              </div>
-              <div class="bottom d-flex flex-row justify-content-between align-items-center p-3 bg-white">
-                <button id="previous-btn" 
-                  class="btn btn-primary d-flex align-items-center btn-danger" type="button">
-                  <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous</button>
-                <button id="next-btn"
-                class="btn btn-primary border-success align-items-center btn-success" type="button">
-                Next<i class="fa fa-angle-right ml-2"></i>
-                </button>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10 main-container">
+          <div class="cont_question">
+            <div class="top question bg-white p-3 border-bottom">
+              <div
+                class="d-flex flex-row justify-content-between align-items-center mcq"
+              >
+                <h4 id="category-title">MCQ Quiz</h4>
+                <span id="remaining-question">(0 of 0)</span>
               </div>
             </div>
-
+            <div class="question bg-white p-3 border-bottom">
+              <div class="d-flex flex-row align-items-center question-title">
+                <h3 class="text-danger">Q.</h3>
+                <h5 id="question" class="mt-1 ml-2"></h5>
+              </div>
+              <div class="ans ml-2">
+                <label class="radio">
+                  <input type="radio" name="answer" value="brazil" />
+                  <span id="answer1"></span>
+                </label>
+              </div>
+              <div class="ans ml-2">
+                <label class="radio">
+                  <input type="radio" name="answer" value="Germany" />
+                  <span id="answer2"></span>
+                </label>
+              </div>
+              <div class="ans ml-2">
+                <label class="radio">
+                  <input type="radio" name="answer" value="Indonesia" />
+                  <span id="answer3"></span>
+                </label>
+              </div>
+              <div class="ans ml-2">
+                <label class="radio">
+                  <input type="radio" name="answer" value="Russia" />
+                  <span id="answer4"></span>
+                </label>
+              </div>
+            </div>
+            <div
+              class="bottom d-flex flex-row justify-content-between align-items-center p-3 bg-white"
+            >
+              <button
+                id="previous-btn"
+                class="btn btn-primary d-flex align-items-center btn-danger"
+                type="button"
+              >
+                <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous
+              </button>
+              <button
+                id="next-btn"
+                class="btn btn-primary border-success align-items-center btn-success"
+                type="button"
+              >
+                Next<i class="fa fa-angle-right ml-2"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="trivia.js"></script>
-    </body>
-
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="trivia.js"></script>
+  </body>
 </html>
