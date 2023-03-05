@@ -38,8 +38,10 @@ const form = document.querySelector('#myForm')
         modalView.style.display = "none";
       });
     }else {
-      localStorage.setItem('genre',genreEl.value)
+      localStorage.setItem('genre',document.getElementById(genreEl.value).innerHTML)
+      localStorage.setItem('id',genreEl.value)
       localStorage.setItem('amount',amountEl.value)
+
       window.location.href = "index.html"
     }
   })
