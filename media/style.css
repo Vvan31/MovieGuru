@@ -1,19 +1,71 @@
-body{
-    background-color:#19647E;
+:root{
+  --green: #1F271B; 
+  --orange: #EE964B;
+  --blue: #19647E;
+  --darkBlue: #0A2733;
+  --highlight: #F4D35E;
+  --white: #E8EBF7;
 }
 
+body{
+    background-color:var(--blue);
+    overflow: hidden;
+    height: 100vh;
+}
 
 nav{
-    background-color: #1F271B;
-    color: #fff;
+    color: var(--white);
+}
+.navbar{
+  padding: 0 !important;
+  padding-left: 20% !important;
+  padding-right: 2rem !important;
+  padding-bottom: 0.5rem !important;
+  background-color: var(--darkBlue) !important;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
 }
 
-.cont_question{
-    border: 15px solid #EE964B;
-  /*   border: 15px solid #28AFB0; */
-    border-radius: 1rem;
-    background-color: #EE964B;
+@media only screen and (min-width: 600px) {
+  .navbar{
+   /*  padding-left: 20% !important;
+    padding-right: 20% !important; */
+    padding-bottom: 1.5rem !important;
+  }
+  .mt-5{
+    margin-top: 0 !important;
+  }
 }
+@media only screen and (min-width: 780px) {
+  .navbar{
+   /*  padding-left: 20% !important;
+    padding-right: 20% !important; */
+    padding-bottom: 1.5rem !important;
+  }
+  .mt-5{
+    margin-top: 3rem !important;
+  }
+}
+
+.navbar-brand{
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 2px var(--green);
+  font-size: 4rem;
+  font-weight: 6rem;
+  color: var(--orange) !important
+}
+.main-container{
+  border: 18px solid var(--orange);
+  padding: 0;
+  background-color: var(--orange);
+  border-radius: 1.5rem;
+  box-shadow: 40px 40px 20px var(--green);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bolder;
+}
+
 .top{
     border-top-left-radius: 0.5rem; 
     border-top-right-radius: 0.5rem; 
@@ -39,9 +91,9 @@ label.radio input {
 
 label.radio span {
   padding: .5rem 0;
-  border: 1px solid red;
+  border: 1px solid var(--darkBlue);
   display: block;
-  color: red;
+  color: var(--darkBlue);
   text-align: center;
   border-radius: 3px;
   margin-top: 7px;
@@ -50,13 +102,13 @@ label.radio span {
 }
 
 label.radio input:checked + span {
-  border-color: red;
-  background-color: red;
+  border-color: var(--darkBlue);
+  background-color: var(--darkBlue);
   color: #fff;
 }
 
 label.radio span.active {
-  background-color: red;
+  background-color: var(--darkBlue);
 }
 
 
@@ -74,21 +126,21 @@ label.radio span.active {
 /* NAV MENU */
 /*- button ---------------------------*/
 .btn_category {
-  font-family: 'Lobster', cursive;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 150%;
 	display: inline-block;
 	text-align: center;
 	text-decoration: none;
 	position: relative;
-  right: -27%;
 	width: 28%;
   max-width: 250px;
+  min-width: 250px;
 	height: 60px;
 	margin: auto;
 	padding: 0.5rem 0.5rem;
 	font-weight: bold;
-	color: #f0ece9;
-	background: #19647E;
+	color: var(--white);
+	background: var(--blue);
 	transition: 0.3s ease-in-out;
   border-radius: 1rem;
 }
@@ -100,18 +152,27 @@ a.btn_category::before {
   left: -5px;
   width: calc(100% - 4px);
   height: calc(100% - 4px);
-  border: 2px solid #EE964B;
+  border: 2px solid var(--orange);
   transition: 0.2s;
   border-radius: 1rem;
 
 }
 
 a.btn_category:hover {
-	background: #EE964B;
-	color: #19647E;
+	background: var(--orange);
+	color: var(--blue);
 }
 
 a.btn_category:hover::before {
   top: 0;
   left: 0;
+}
+.btn-success{
+  background-color: var(--orange);
+  border-color: var(--orange);
+}
+.btn-danger{
+  background-color: var(--blue);
+  border-color: var(--blue);
+
 }
