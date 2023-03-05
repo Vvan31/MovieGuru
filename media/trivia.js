@@ -1,11 +1,4 @@
-// Individual event listeners for categories.
-// const books = document.getElementById('10').addEventListener('click', showData)
-// const film = document.getElementById('11').addEventListener('click', showData)
-// const music = document.getElementById('12').addEventListener('click', showData)
-// const tv = document.getElementById('14').addEventListener('click', showData)
-// const videoGames = document
-//   .getElementById('15')
-//   .addEventListener('click', showData)
+
 window.addEventListener('load', showData)
 let score = 0
 const answerData = []
@@ -161,25 +154,25 @@ function randomShuffle(array) {
   }
   return array
 }
+// const radioButtons = document.querySelectorAll('input[type="radio"]')
+// radioButtons.forEach((radioButton) => {
+//   radioButton.addEventListener('click', () => {
+//     if (radioButton.checked) {
+//       radioButtons.forEach((rb) => {
+//         rb.nextElementSibling.style.backgroundColor = 'white'
 
-const radioButtons = document.querySelectorAll('input[type="radio"]')
-radioButtons.forEach((radioButton) => {
-  radioButton.addEventListener('click', () => {
-    if (radioButton.checked) {
-      radioButtons.forEach((rb) => {
-        rb.nextElementSibling.style.backgroundColor = 'white'
+//         rb.nextElementSibling.style.color = 'red'
+//       })
+//       radioButton.nextElementSibling.style.backgroundColor = 'red'
+//       radioButton.nextElementSibling.style.color = 'white'
+//     }
+//   })
+// })
 
-        rb.nextElementSibling.style.color = 'red'
-      })
-      radioButton.nextElementSibling.style.backgroundColor = 'red'
-      radioButton.nextElementSibling.style.color = 'white'
-    }
-  })
-})
+// function resetRadioButtonsBackground() {
+//   radioButtons.forEach((rb) => {
+//     rb.nextElementSibling.style.backgroundColor = 'white';
+//     rb.nextElementSibling.style.color = 'red';
+//   });
+// }
 
-function resetRadioButtonsBackground() {
-  radioButtons.forEach((rb) => {
-    rb.nextElementSibling.style.backgroundColor = 'white'
-    rb.nextElementSibling.style.color = 'red'
-  })
-}
