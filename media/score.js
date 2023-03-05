@@ -64,7 +64,7 @@ function showCongratsText(score) {
 
   console.log((score / amount) * 100)
 
-  if (score === amount) {
+  if (score == amount) {
     congratsEl.textContent = CONGRATS_TEXTS[0]
   } else if ((score / amount) * 100 >= 75) {
     congratsEl.textContent = CONGRATS_TEXTS[1]

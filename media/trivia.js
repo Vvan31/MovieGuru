@@ -1,11 +1,5 @@
-// Individual event listeners for categories.
-// const books = document.getElementById('10').addEventListener('click', showData)
-// const film = document.getElementById('11').addEventListener('click', showData)
-// const music = document.getElementById('12').addEventListener('click', showData)
-// const tv = document.getElementById('14').addEventListener('click', showData)
-// const videoGames = document
-//   .getElementById('15')
-//   .addEventListener('click', showData)
+
+window.addEventListener('load', showData)
 let score = 0
 const answerData = []
 /* Fetch trivia questions from an API. 
@@ -160,7 +154,6 @@ function randomShuffle(array) {
   }
   return array
 }
-
 // const radioButtons = document.querySelectorAll('input[type="radio"]')
 // radioButtons.forEach((radioButton) => {
 //   radioButton.addEventListener('click', () => {
@@ -182,3 +175,4 @@ function randomShuffle(array) {
 //     rb.nextElementSibling.style.color = 'red';
 //   });
 // }
+
