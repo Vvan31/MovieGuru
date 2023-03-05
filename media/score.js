@@ -1,6 +1,6 @@
 // need to assign score dynamically
 const score = localStorage.getItem('score')
-const amount = 20
+const amount = localStorage.getItem('amount')
 function showEverything() {
   document.querySelector('#score span + span').innerHTML = amount
   setTimeout(() => {
@@ -64,7 +64,7 @@ function showCongratsText(score) {
 
   console.log((score / amount) * 100)
 
-  if (score === amount) {
+  if (score == amount) {
     congratsEl.textContent = CONGRATS_TEXTS[0]
   } else if ((score / amount) * 100 >= 75) {
     congratsEl.textContent = CONGRATS_TEXTS[1]

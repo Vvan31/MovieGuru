@@ -11,7 +11,8 @@ nav{
 .cont_question{
     border: 15px solid #EE964B;
   /*   border: 15px solid #28AFB0; */
-    border-radius: 5%;
+    border-radius: 1rem;
+    background-color: #EE964B;
 }
 .top{
     border-top-left-radius: 0.5rem; 

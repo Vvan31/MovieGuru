@@ -1,12 +1,8 @@
-
-// Individual event listeners for categories.
-
 let score = 0
 const answerData = []
 
 const categorybtn = document.querySelector(".btn_category");
 categorybtn.addEventListener('click', () => window.location.href = "top.html");
-
 
 window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
@@ -144,7 +140,6 @@ function checkAnswerData(answerData) {
 function htmlDecode(input) {
   let doc = new DOMParser().parseFromString(input, 'text/html')
   return doc.documentElement.textContent
-
 }
 
 function randomShuffle(array) {
@@ -161,27 +156,25 @@ function randomShuffle(array) {
   }
   return array
 }
+// const radioButtons = document.querySelectorAll('input[type="radio"]')
+// radioButtons.forEach((radioButton) => {
+//   radioButton.addEventListener('click', () => {
+//     if (radioButton.checked) {
+//       radioButtons.forEach((rb) => {
+//         rb.nextElementSibling.style.backgroundColor = 'white'
 
+//         rb.nextElementSibling.style.color = 'red'
+//       })
+//       radioButton.nextElementSibling.style.backgroundColor = 'red'
+//       radioButton.nextElementSibling.style.color = 'white'
+//     }
+//   })
+// })
 
+// function resetRadioButtonsBackground() {
+//   radioButtons.forEach((rb) => {
+//     rb.nextElementSibling.style.backgroundColor = 'white';
+//     rb.nextElementSibling.style.color = 'red';
+//   });
+// }
 
-const radioButtons = document.querySelectorAll('input[type="radio"]');
-radioButtons.forEach((radioButton) => {
-  radioButton.addEventListener('click', () => {
-    if (radioButton.checked) {
-      radioButtons.forEach((rb) => {
-        rb.nextElementSibling.style.backgroundColor = 'white';
-
-        rb.nextElementSibling.style.color = 'red';
-      });
-      radioButton.nextElementSibling.style.backgroundColor = 'red';
-      radioButton.nextElementSibling.style.color = 'white';
-    }
-  });
-});
-
-function resetRadioButtonsBackground() {
-  radioButtons.forEach((rb) => {
-    rb.nextElementSibling.style.backgroundColor = 'white';
-    rb.nextElementSibling.style.color = 'red';
-  });
-}
