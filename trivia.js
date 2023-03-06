@@ -7,20 +7,22 @@ categorybtn.addEventListener('click', () => window.location.href = "top.html");
 window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
    returns - Data Object.*/
-async function fetchQuizData (id,amount){
-const options = {
-  method: 'GET',
-  url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
-}
-return await axios
-  .request(options)
-  .then(async function (response) {
-    const { results } = await response.data
-    return results;
+async function fetchQuizData(id, amount) {
+  const options = {
+    method: 'GET',
+    url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
+  }
+  return await axios
+    .request(options)
+    .then(async function (response) {
+      const {
+        results
+      } = await response.data
+      return results;
 
-  }).catch(function (error) {
-    console.error(error);
-  });
+    }).catch(function (error) {
+      console.error(error);
+    });
 }
 
 /*  Called from eventListener on Category options 
@@ -29,7 +31,7 @@ async function showData(e) {
   const category = localStorage.getItem('genre')
   const id = localStorage.getItem('id')
   const amount = localStorage.getItem('amount')
-  let trivia = await fetchQuizData(id,amount);
+  let trivia = await fetchQuizData(id, amount);
   let [questions, answers] = getQuestions(trivia);
 
   showQuestions(questions, answers, id, category)
@@ -57,7 +59,7 @@ function getQuestions(trivia) {
 /* creates button functionality for displaying questions dynamically */
 function showQuestions(questions, answers, id, category) {
   let actual_question = 0
- /*  let category = document.getElementById(id).innerHTML */
+  /*  let category = document.getElementById(id).innerHTML */
   let isCorrect = false
 
   // First question setup.
@@ -67,13 +69,18 @@ function showQuestions(questions, answers, id, category) {
   // Button event listeners for prev and next functionality.
   next_btn = document.getElementById('next-btn')
   prev_btn = document.getElementById('previous-btn')
-  
+
   next_btn.addEventListener('click', function () {
-    checkAnswer(answers[2 * actual_question], isCorrect)
-    actual_question < questions.length - 1
-      ? (actual_question += 1)
-      : (window.location.href = 'scorePage.html')
-    updateData(questions, answers, actual_question)
+    let hasAnswered = checkAnswer(answers[2 * actual_question], isCorrect)
+    if (hasAnswered) {
+      actual_question < questions.length - 1 ?
+      (actual_question += 1) :
+      (window.location.href = 'scorePage.html')
+
+      updateData(questions, answers, actual_question)
+    } else {
+      console.log("Answer!")
+    }
   })
   prev_btn.addEventListener('click', function () {
     actual_question > 0 ? (actual_question -= 1) : (actual_question = 0)
@@ -104,18 +111,23 @@ function updateData(questions, answers, actual_question) {
     all_answers[2]
   document.getElementById('answer4').previousElementSibling.value =
     all_answers[3]
-  console.log({ correct_answer })
+  console.log({
+    correct_answer
+  })
 }
 
 function checkAnswer(correct_answer, isCorrect) {
-  let user_answer
+  let user_answer;
+  let checked = false;
   document.querySelectorAll('.radio input').forEach(function (answer) {
     if (answer.checked) {
       user_answer = htmlDecode(answer.value)
       countUpScore(htmlDecode(correct_answer), user_answer, isCorrect)
       answer.checked = false
+      checked = true;
     }
   })
+  return checked;
 }
 
 // count up the score
@@ -149,33 +161,11 @@ function randomShuffle(array) {
 
   while (currentIndex != 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex--
-    ;[array[currentIndex], array[randomIndex]] = [
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
       array[randomIndex],
       array[currentIndex],
     ]
   }
   return array
 }
-// const radioButtons = document.querySelectorAll('input[type="radio"]')
-// radioButtons.forEach((radioButton) => {
-//   radioButton.addEventListener('click', () => {
-//     if (radioButton.checked) {
-//       radioButtons.forEach((rb) => {
-//         rb.nextElementSibling.style.backgroundColor = 'white'
-
-//         rb.nextElementSibling.style.color = 'red'
-//       })
-//       radioButton.nextElementSibling.style.backgroundColor = 'red'
-//       radioButton.nextElementSibling.style.color = 'white'
-//     }
-//   })
-// })
-
-// function resetRadioButtonsBackground() {
-//   radioButtons.forEach((rb) => {
-//     rb.nextElementSibling.style.backgroundColor = 'white';
-//     rb.nextElementSibling.style.color = 'red';
-//   });
-// }
-
