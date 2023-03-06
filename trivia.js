@@ -67,6 +67,7 @@ function showQuestions(questions, answers, id, category) {
   // Button event listeners for prev and next functionality.
   next_btn = document.getElementById('next-btn')
   prev_btn = document.getElementById('previous-btn')
+  
   next_btn.addEventListener('click', function () {
     checkAnswer(answers[2 * actual_question], isCorrect)
     actual_question < questions.length - 1

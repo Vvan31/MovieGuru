@@ -80,7 +80,7 @@ function showCongratsText(score) {
 // ===================================
 // GSAP
 // ===================================
-const Timeline = gsap.timeline({
+const tl = gsap.timeline({
   defaults: {
     alpha: 0,
     duration: 0.8,
@@ -88,9 +88,23 @@ const Timeline = gsap.timeline({
   },
 })
 
-Timeline.from('.score-content', {
+tl.from('.score-content', {
   scale: 0,
 }).from('.congrats', {
   delay: 1.2,
   y: 10,
 })
+
+/* FOOTER */
+const TimeLine = gsap.timeline({
+  defaults: {
+      duration: 2,
+      autoAlpha: 0,
+      ease: "power4.out"
+  }
+})
+TimeLine
+// .from('.logo', { x: -20 })
+.from('.footer-items', { x: -50, stagger: 0.5 })
+.from('.title', { y: 20 })
+.from('.college', { y: 20 },)
