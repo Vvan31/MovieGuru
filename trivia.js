@@ -1,8 +1,8 @@
 let score = 0
 const answerData = []
 
-const categorybtn = document.querySelector(".btn_category");
-categorybtn.addEventListener('click', () => window.location.href = "top.html");
+const categorybtn = document.querySelector('.btn_category')
+categorybtn.addEventListener('click', () => (window.location.href = 'top.html'))
 
 window.addEventListener('DOMContentLoaded', showData)
 /* Fetch trivia questions from an API. 
@@ -10,19 +10,17 @@ window.addEventListener('DOMContentLoaded', showData)
 async function fetchQuizData(id, amount) {
   const options = {
     method: 'GET',
-    url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`
+    url: `https://opentdb.com/api.php?amount=${amount}&category=${id}&type=multiple`,
   }
   return await axios
     .request(options)
     .then(async function (response) {
-      const {
-        results
-      } = await response.data
-      return results;
-
-    }).catch(function (error) {
-      console.error(error);
-    });
+      const { results } = await response.data
+      return results
+    })
+    .catch(function (error) {
+      console.error(error)
+    })
 }
 
 /*  Called from eventListener on Category options 
@@ -31,10 +29,10 @@ async function showData(e) {
   const category = localStorage.getItem('genre')
   const id = localStorage.getItem('id')
   const amount = localStorage.getItem('amount')
-  let trivia = await fetchQuizData(id, amount);
-  let [questions, answers] = getQuestions(trivia);
+  let trivia = await fetchQuizData(id, amount)
+  let [questions, answers] = getQuestions(trivia)
 
-  showQuestions(questions, answers, id, category)
+  showQuestions(questions, answers, id, category, amount)
 }
 /*  return - questions array and answers array 
     answers array = [correct_answer , [all_answers], correct_answer [all_answers] ] */
@@ -57,7 +55,7 @@ function getQuestions(trivia) {
   return [questions, answers]
 }
 /* creates button functionality for displaying questions dynamically */
-function showQuestions(questions, answers, id, category) {
+function showQuestions(questions, answers, id, category, amount) {
   let actual_question = 0
   /*  let category = document.getElementById(id).innerHTML */
   let isCorrect = false
@@ -72,14 +70,14 @@ function showQuestions(questions, answers, id, category) {
 
   next_btn.addEventListener('click', function () {
     let hasAnswered = checkAnswer(answers[2 * actual_question], isCorrect)
-    if (hasAnswered) {
-      actual_question < questions.length - 1 ?
-      (actual_question += 1) :
-      (window.location.href = 'scorePage.html')
+    if (hasAnswered && score <= Number(amount)) {
+      actual_question < questions.length - 1
+        ? (actual_question += 1)
+        : (window.location.href = 'scorePage.html')
 
       updateData(questions, answers, actual_question)
     } else {
-      console.log("Answer!")
+      console.log('Answer!')
     }
   })
   prev_btn.addEventListener('click', function () {
@@ -112,22 +110,22 @@ function updateData(questions, answers, actual_question) {
   document.getElementById('answer4').previousElementSibling.value =
     all_answers[3]
   console.log({
-    correct_answer
+    correct_answer,
   })
 }
 
 function checkAnswer(correct_answer, isCorrect) {
-  let user_answer;
-  let checked = false;
+  let user_answer
+  let checked = false
   document.querySelectorAll('.radio input').forEach(function (answer) {
     if (answer.checked) {
       user_answer = htmlDecode(answer.value)
       countUpScore(htmlDecode(correct_answer), user_answer, isCorrect)
       answer.checked = false
-      checked = true;
+      checked = true
     }
   })
-  return checked;
+  return checked
 }
 
 // count up the score
@@ -161,8 +159,8 @@ function randomShuffle(array) {
 
   while (currentIndex != 0) {
     randomIndex = Math.floor(Math.random() * currentIndex)
-    currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [
+    currentIndex--
+    ;[array[currentIndex], array[randomIndex]] = [
       array[randomIndex],
       array[currentIndex],
     ]
