@@ -1,0 +1,157 @@
+:root{
+  --green: #1F271B; 
+  --orange: #EE964B;
+  --blue: #19647E;
+  --darkBlue: #0A2733;
+  --highlight: #F4D35E;
+  --white: #E8EBF7;
+}
+
+img{
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+.footer-bg{
+  width: 100%;
+  height: 10rem;
+  display: block;
+}
+.footer-items{
+  display: flex;
+  justify-content: space-evenly;
+  height: 10rem;
+  flex-wrap: wrap;
+}
+.avatar{
+  height: 1;
+  margin-top: 25px;
+  max-width: 85px;
+}
+.name{
+  color: var(--white);
+  background-color: rgb(0,0,0,0.6);
+  margin-bottom: 0;
+}
+
+i.bi.bi-github{
+  color: black;
+}
+.bi{
+  display: none;
+}
+
+.hover:hover{
+  transform: translateY(-50px);
+}
+
+.hover{
+  align-self: flex-end;
+  width: 100px;
+  height: 100px;
+  transform-origin: bottom;
+}
+
+.hover:hover i.bi{
+  display: inline-block;
+}
+.hover:hover p.name{
+  background-color: rgb(0,0,0,1);
+}
+.title{
+  margin: 40px auto 0;
+  font-size: 25px;
+  color: var(--white);
+  background-color: rgb(0,0,0,0.5);
+}
+.college{
+  color: var(--white);
+  background-color: rgb(0,0,0,0.5);
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+100% {
+  background-position: 50px 0px;
+}
+}
+@-moz-keyframes bg-scrolling-reverse {
+100% {
+  background-position: 50px 0px;
+}
+}
+@-o-keyframes bg-scrolling-reverse {
+100% {
+  background-position: 50px 0px;
+}
+}
+@keyframes bg-scrolling-reverse {
+100% {
+  background-position: 50px 0px;
+}
+}
+@-webkit-keyframes bg-scrolling {
+0% {
+  background-position: 50px 0px;
+}
+}
+@-moz-keyframes bg-scrolling {
+0% {
+  background-position: 50px 50px;
+}
+}
+@-o-keyframes bg-scrolling {
+0% {
+  background-position: 50px 50px;
+}
+}
+@keyframes bg-scrolling {
+0% {
+  background-position: 50px 50px;
+}
+}
+/* Main styles */
+footer {
+height: 16rem;
+color:var(--green);
+font: 600 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+text-align: center;
+/* img size is 50x50 */
+/*   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+*/
+background: url("../img/city.png") repeat 0 0;
+background-size:contain;
+
+-webkit-animation: bg-scrolling-reverse 7.92s infinite;
+/* Safari 4+ */
+-moz-animation: bg-scrolling-reverse 7.92s infinite;
+/* Fx 5+ */
+-o-animation: bg-scrolling-reverse 7.92s infinite;
+/* Opera 12+ */
+animation: bg-scrolling-reverse 7.92s infinite;
+/* IE 10+ */
+-webkit-animation-timing-function: linear;
+-moz-animation-timing-function: linear;
+-o-animation-timing-function: linear;
+animation-timing-function: linear;
+}
+
+@media screen and (max-width: 600px) {
+  footer{
+    background-size:cover;
+  }
+  .footer-items{
+    height: fit-content;
+  }
+  .hover{
+    margin-bottom: 5%;
+    margin-right: 5%;
+  }
+.title{
+  margin: 3% auto 0;
+}
+
+}
