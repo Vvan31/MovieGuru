@@ -34,8 +34,9 @@
     <img src="img/logo.png" alt="Logo" width="auto" height="80">
   </a>
 
-  <p align="center">
-    project_description
+  <p align="center" style=" text-align: justify;">
+      Welcome to Trivia Guru, the ultimate trivia game that will put your knowledge to the test! With multiple categories to choose from, you can select your favorite topics and challenge your friends to see who is the ultimate Trivia Guru. </p>
+    <p align="center" style=" text-align: justify;"> 
     <br />
     <a href="https://ubiquitous-fairy-124cfe.netlify.app/top.html" target=”_blank”><strong>Explore trivia game »</strong></a>
     <br />
@@ -82,23 +83,15 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Our game has a fun and engaging design, made with JS and Bootstrap, that will keep you entertained for hours. Whether you're a Literature fan, a music buff, a movie fanatic, or a videogames nerd, we've got a category for you.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
+* [![JS][JS.com]][JS-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,7 +116,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Vvan31/MovieGuru.git
    ```
 3. Install NPM packages
    ```sh
@@ -157,7 +150,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Vvan31/MovieGuru/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,9 +186,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@twitter_handle](https://twitter.com/iamvvan_) - v31.osorio@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Vvan31/MovieGuru](https://github.com/Vvan31/MovieGuru)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -214,7 +207,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Vvan31/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Vvan31/MovieGuru.svg?style=for-the-badge
 [contributors-url]: https://github.com/Vvan31/MovieGuru/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Vvan31/MovieGuru.svg?style=for-the-badge
 [forks-url]: https://github.com/Vvan31/MovieGuru/network/members
@@ -225,7 +218,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-shield]: https://img.shields.io/github/license/Vvan31/MovieGuru.svg?style=for-the-badge
 [license-url]: https://github.com/Vvan31/MovieGuru/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/vivianos
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -243,3 +236,5 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[JS.com]: https://img.shields.io/badge/Javascript-EFD81D?style=for-the-badge&logo=javascript&logoColor=black
+[JS-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
