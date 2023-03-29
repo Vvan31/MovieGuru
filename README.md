@@ -38,7 +38,7 @@
       Welcome to Trivia Guru, the ultimate trivia game that will put your knowledge to the test! With multiple categories to choose from, you can select your favorite topics and challenge your friends to see who is the ultimate Trivia Guru. </p>
     <p align="center" style=" text-align: justify;"> 
     <br />
-    <a href="https://ubiquitous-fairy-124cfe.netlify.app/top.html" target=”_blank”><strong>Explore trivia game »</strong></a>
+    <a href="https://ubiquitous-fairy-124cfe.netlify.app/top.html" target=”_blank”><strong>Explore Trivia Guru online »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Vvan31/MovieGuru">View Demo</a>
@@ -82,7 +82,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/Vvan31/MovieGuru/blob/main/img/ssGame.png)
 Our game has a fun and engaging design, made with JS and Bootstrap, that will keep you entertained for hours. Whether you're a Literature fan, a music buff, a movie fanatic, or a videogames nerd, we've got a category for you.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -91,6 +91,7 @@ Our game has a fun and engaging design, made with JS and Bootstrap, that will ke
 * [![JS][JS.com]][JS-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
+* [![GSAP][GSAP.com]][GSAP-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -100,36 +101,18 @@ Our game has a fun and engaging design, made with JS and Bootstrap, that will ke
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You can use the online version of the game [here](https://ubiquitous-fairy-124cfe.netlify.app/top.html) or you can clone the project to run localy. 
+We use [https://the-trivia-api.com/](the-trivia-api.com) to get all our questions and answers. The API does not need a Key but if you want more than 100,000 requests per month, there are more options for you that do need an API key on the website.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/Vvan31/MovieGuru.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+ 2. Run the index.html file on any web browser. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -141,34 +124,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/Vvan31/MovieGuru/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTRIBUTING -->
-## Contributing
+## Contributors
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -219,7 +177,7 @@ Project Link: [https://github.com/Vvan31/MovieGuru](https://github.com/Vvan31/Mo
 [license-url]: https://github.com/Vvan31/MovieGuru/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/vivianos
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: https://github.com/Vvan31/MovieGuru/blob/main/img/ssGame.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
@@ -238,3 +196,5 @@ Project Link: [https://github.com/Vvan31/MovieGuru](https://github.com/Vvan31/Mo
 [JQuery-url]: https://jquery.com 
 [JS.com]: https://img.shields.io/badge/Javascript-EFD81D?style=for-the-badge&logo=javascript&logoColor=black
 [JS-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[GSAP.com]: https://img.shields.io/badge/CDN-GSAP-brightgreen
+[GSAP-url]: https://greensock.com/
