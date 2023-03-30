@@ -28,7 +28,7 @@
 
 
 <!-- PROJECT LOGO -->
-#readme-top
+## Readme top
 <br />
 <div align="center">
   <a href="https://github.com/Vvan31/MovieGuru">
