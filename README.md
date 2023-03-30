@@ -28,6 +28,7 @@
 
 
 <!-- PROJECT LOGO -->
+#readme-top
 <br />
 <div align="center">
   <a href="https://github.com/Vvan31/MovieGuru">
@@ -64,16 +65,10 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -114,54 +109,22 @@ We use [https://the-trivia-api.com/](the-trivia-api.com) to get all our question
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- CONTRIBUTING -->
-## Contributors
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
+Atena [Atena's Github](https://github.com/AtenaHatta)
 
-Your Name - [@twitter_handle](https://twitter.com/iamvvan_) - v31.osorio@gmail.com
+Daiki [Daiki's Github](https://github.com/daiki-gl)
+
+Paulo [Paulo's Github](https://github.com/paulomczcoelho)
+
+Ron [Ron's Github](https://github.com/RyunosukeSakurada)
+
+Vivian - [@iamvvan_](https://twitter.com/iamvvan_) - v31.osorio@gmail.com -
+         [Vivian's Github](https://github.com/RyunosukeSakurada) 
 
 Project Link: [https://github.com/Vvan31/MovieGuru](https://github.com/Vvan31/MovieGuru)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
