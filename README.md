@@ -39,7 +39,7 @@
       Welcome to Trivia Guru, the ultimate trivia game that will put your knowledge to the test! With multiple categories to choose from, you can select your favorite topics and challenge your friends to see who is the ultimate Trivia Guru. </p>
     <p align="center" style=" text-align: justify;"> 
     <br />
-    <a href="https://ubiquitous-fairy-124cfe.netlify.app/top.html" target=”_blank”><strong>Explore Trivia Guru online »</strong></a>
+    <a href="https://triviaguru.netlify.app/top.html" target=”_blank”><strong>Explore Trivia Guru online »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Vvan31/MovieGuru">View Demo</a>
