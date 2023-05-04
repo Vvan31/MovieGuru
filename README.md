@@ -42,7 +42,7 @@
     <a href="https://triviaguru.netlify.app/top.html" target=”_blank”><strong>Explore Trivia Guru online »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Vvan31/MovieGuru">View Demo</a>
+    <a href="https://triviaguru.netlify.app/top.html">View Demo</a>
     ·
     <a href="https://github.com/Vvan31/MovieGuru/issues">Report Bug</a>
     ·
